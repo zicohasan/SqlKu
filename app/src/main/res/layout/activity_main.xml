@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="hideKeyboard"
+    tools:context="mp.zico.org.sqlku.MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="X"
+        android:id="@+id/textX"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Y"
+        android:id="@+id/textY"
+        android:layout_below="@+id/editText_X"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/editText_X"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textX"
+        android:layout_toRightOf="@+id/textX"
+        android:inputType="number"
+        android:layout_alignEnd="@+id/button_add" />
+
+
+    <EditText
+        android:id="@+id/editText_Y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_X"
+        android:layout_toRightOf="@+id/textY"
+        android:inputType="number"
+        android:layout_alignEnd="@+id/editText_X" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Data"
+        android:id="@+id/button_add"
+        android:layout_alignBaseline="@+id/button_viewAll"
+        android:layout_alignBottom="@+id/button_viewAll"
+        android:layout_toEndOf="@+id/button_viewAll" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:id="@+id/button_viewAll"
+        android:layout_below="@+id/editText_Y"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/button_update"
+        android:layout_below="@+id/button_add"
+        android:layout_alignEnd="@+id/button_add" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/button_delete"
+        android:layout_centerVertical="true"
+        android:layout_below="@+id/button_viewAll"
+        android:layout_alignLeft="@+id/button_viewAll"
+        android:layout_alignStart="@+id/button_viewAll" />
+
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="368dp"
+        android:layout_height="400dp"
+        android:id="@+id/graph"
+        android:layout_below="@+id/button_update"
+        tools:layout_editor_absoluteY="95dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+</RelativeLayout>
